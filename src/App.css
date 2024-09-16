@@ -1,0 +1,110 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Card container */
+.news-card {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  margin: 10px 10px;
+}
+
+#tag
+{
+  right:"90%";
+  z-index:1;
+}
+
+/* Card image */
+.news-card img {
+  width: 90%;
+  height: 200px;
+  transition: transform 0.3s ease;
+}
+
+/* Card content */
+.news-card .content {
+  padding: 10px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: scale(1.1); /* Scale up the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Add a slight transformation to content and image on hover for extra effect */
+.card:hover:img {
+  transform: scale(1.1); /* Scale up the image slightly */
+}
+
+.card:hover .content {
+  transform: translateY(-10px); /* Move content up slightly */
+}
+
+/* Optional: Add an explosion effect */
+@keyframes explosion {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+.card:hover {
+  animation: explosion 0.5s ease-in-out;
+}
+body
+{
+  background-color: #E8E9E6
+}
+.card
+{
+  margin: 20px 0px;
+  background-color: #F5F5DC;
+  height: 450px;
+}
